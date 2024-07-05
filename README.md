@@ -80,3 +80,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgments
 
 - Thanks to "Web3 Club" on YouTube for the inspiration and guidance on this project.
+- A big thank you to [Guild Audits](https://x.com/GuildAudits) and the founder, Mr. David, for playing a major role in my learning journey.
+
+---
+
+## Contact
+
+Follow me on Twitter: [@Johnsdanlami](https://x.com/Johnsdanlami)
