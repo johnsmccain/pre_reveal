@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../components/ui/button";
 import toast from "react-hot-toast";
 import { Contract } from "ethers";
@@ -40,8 +40,10 @@ export const MintNFT = ({ signer }: any) => {
 
 	return (
 		<div className="w-full ">
-			<h1>Mint NFT</h1>
-			<div className="flex justify-center">
+			<h1 className="font-sans">
+				Click the Mint NFT button to mint a random NFT
+			</h1>
+			<div className="flex justify-center py-9">
 				{isconnected && <Button onClick={mintNFT}>Mint now</Button>}
 				{!isconnected && <Button>Connect Wallet</Button>}
 			</div>

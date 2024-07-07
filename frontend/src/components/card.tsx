@@ -5,11 +5,10 @@ import { Contract } from "ethers";
 import PrerevealAddress from "../../contractsData/Prereveal-address.json";
 import PrerevealABI from "../../contractsData/Prereveal.json";
 import toast from "react-hot-toast";
-import fetchImg from "../fetchImg";
+
 export const Card = ({ uri, id, signer }: any) => {
 	const [data, setData] = useState<any>();
-	// const [isconnected, setIsconnected] = useState<boolean>();
-	// const [account, setAccount] = useState<boolean>();
+
 	async function fetchData() {
 		try {
 			const response = await fetch(uri);
@@ -79,15 +78,19 @@ export const Card = ({ uri, id, signer }: any) => {
 				)}
 			</div>
 			<div className="flex justify-around p-2">
-				<Button className="mr-2" onClick={revealNFT}>
-					Reveal
-				</Button>
-
-				<Link to={`/reveal/${id}`} className="">
-					<Button variant={"outline"} className="">
-						Open
+				{!data && (
+					<Button className="mr-2" onClick={revealNFT}>
+						Reveal
 					</Button>
-				</Link>
+				)}
+
+				{data && (
+					<Link to={`/reveal/${id}`} className="">
+						<Button variant={"outline"} className="">
+							Open
+						</Button>
+					</Link>
+				)}
 			</div>
 		</div>
 	);

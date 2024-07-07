@@ -22,7 +22,6 @@ export const NFTs = ({ signer }: { signer: any }) => {
 		}
 		setEthData(tempArray);
 	}
-	// console.log(ethData);
 
 	useEffect(() => {
 		connectToBlockchain();
